@@ -1,1 +1,34 @@
-<h1>Hospital Veterinario1111</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
+    <link rel="icon" href="{% static 'img/icon.jpg'%}" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a mi página</h1>
+    </header>
+
+    <main>
+        <h1>Veterinarios</h1>
+        <ul>
+            {% for veterinario in object_list %}
+            <li>{{ veterinario.nombre }} - {{ veterinario.dni }}</li>
+            {% empty %}
+            <li>Sin Registros.</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>© 2024 Mi sitio web</p>
+    </footer>
+</body>
+
+</html>

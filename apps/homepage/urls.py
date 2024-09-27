@@ -1,7 +1,6 @@
 from django.urls import path, include
-from .views import HomepageListView
+from apps.homepage.views  import HomepageListView
 
 urlpatterns = [
-    path('listar/', HomepageListView.as_view(), name='homepage'),
-     path('listar/', HomepageListView.as_view(), name='homepage'),
+    path('veterinario/', HomepageListView.as_view(), name='homepage'),
 ]

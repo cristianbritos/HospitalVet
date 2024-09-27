@@ -1,0 +1,33 @@
+# Archivos de entorno virtual (Python)
+venv/
+env/
+
+# Archivos de configuración del entorno
+*.env
+
+# Archivos compilados de Python
+*.pyc
+__pycache__/
+
+# Archivos de base de datos locales (SQLite)
+db.sqlite3
+*.sqlite3
+
+# Archivos de migraciones (opcionales si no quieres versionarlos)
+*/migrations/*.py
+*/migrations/*.pyc
+!*/migrations/__init__.py
+
+# Archivos estáticos generados
+staticfiles/
+static/
+media/
+
+# Archivos de logs
+*.log
+
+# Archivos creados por editores
+*.swp
+*.swo
+*.idea/
+.vscode/
