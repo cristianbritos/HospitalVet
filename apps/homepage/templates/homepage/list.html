@@ -18,8 +18,9 @@
     <main>
         <h1>Veterinarios</h1>
         <ul>
+            <img src="{% static 'img/image.jpg' %}" alt="Imagen" class="img-modificada">
             {% for veterinario in object_list %}
-            <li>{{ veterinario.nombre }} - {{ veterinario.dni }}</li>
+            <li>Veterinario: {{ veterinario.nombre }} - {{ veterinario.dni }} - {{ veterinario.telefono }}</li>
             {% empty %}
             <li>Sin Registros.</li>
             {% endfor %}
