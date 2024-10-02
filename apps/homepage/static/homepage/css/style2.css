@@ -1,0 +1,43 @@
+/* Estilos para el formulario */
+.custom-form {
+    background-color: #f9f9f9; /* Color de fondo del formulario */
+    padding: 20px; /* Espaciado interno del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para los campos del formulario */
+  .custom-form input[type="text"],
+  .custom-form input[type="email"],
+  .custom-form input[type="password"],
+  .custom-form select,
+  .custom-form textarea {
+    width: 100%; /* Abarca todo el ancho del formulario */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado entre campos */
+    border: 1px solid #ccc; /* Borde de los campos */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el padding no se desborde */
+    font-size: 16px; /* Tamaño de fuente */
+    background-color: #fff; /* Color de fondo */
+  }
+  
+  /* Estilos para el botón de envío */
+  .submit-btn {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición para el hover */
+  }
+  
+  /* Efecto hover para el botón */
+  .submit-btn:hover {
+    background-color: #218838; /* Color al pasar el mouse */
+  }
+  

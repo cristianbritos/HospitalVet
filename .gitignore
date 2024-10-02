@@ -10,8 +10,8 @@ env/
 __pycache__/
 
 # Archivos de base de datos locales (SQLite)
-db.sqlite3
-*.sqlite3
+#db.sqlite3
+#*.sqlite3
 
 # Archivos de migraciones (opcionales si no quieres versionarlos)
 */migrations/*.py
@@ -20,7 +20,6 @@ db.sqlite3
 
 # Archivos estáticos generados
 staticfiles/
-static/
 media/
 
 # Archivos de logs
