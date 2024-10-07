@@ -16,11 +16,12 @@
     </header>
 
     <main>
-        <h1>Veterinarios</h1>
-        <ul>
-            <img src="{% static 'img/image.jpg' %}" alt="Imagen" class="img-modificada">
+        <img src="{% static 'img/image.jpg' %}" alt="Imagen" class="img-modificada">
+        <h1>Veterinarios</h1>     
+        {{ tittle }}   
+        <ul>            
             {% for veterinario in object_list %}
-            <li>Veterinario: {{ veterinario.nombre }} - {{ veterinario.dni }} - {{ veterinario.telefono }}</li>
+            <li>Veterinario: {{ veterinario.nombre }} - DNI: {{ veterinario.dni }} - Telefono: {{ veterinario.telefono }}</li>
             {% empty %}
             <li>Sin Registros.</li>
             {% endfor %}

@@ -14,6 +14,7 @@ class HomepageListView(ListView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['tittle'] = 'Lista de Veterinarios'
         return context  
 
 class HomepageCreateView(CreateView):
