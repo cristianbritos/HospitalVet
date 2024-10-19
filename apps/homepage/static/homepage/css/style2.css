@@ -1,43 +1,75 @@
-/* Estilos para el formulario */
+.form-container {
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
 .custom-form {
-    background-color: #f9f9f9; /* Color de fondo del formulario */
-    padding: 20px; /* Espaciado interno del formulario */
-    border-radius: 10px; /* Bordes redondeados */
-    max-width: 500px; /* Ancho máximo del formulario */
-    margin: 0 auto; /* Centrar el formulario en la página */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  }
-  
-  /* Estilos para los campos del formulario */
-  .custom-form input[type="text"],
-  .custom-form input[type="email"],
-  .custom-form input[type="password"],
-  .custom-form select,
-  .custom-form textarea {
-    width: 100%; /* Abarca todo el ancho del formulario */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 15px; /* Espaciado entre campos */
-    border: 1px solid #ccc; /* Borde de los campos */
-    border-radius: 5px; /* Bordes redondeados */
-    box-sizing: border-box; /* Asegura que el padding no se desborde */
-    font-size: 16px; /* Tamaño de fuente */
-    background-color: #fff; /* Color de fondo */
-  }
-  
-  /* Estilos para el botón de envío */
-  .submit-btn {
-    background-color: #28a745; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin bordes */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s ease; /* Transición para el hover */
-  }
-  
-  /* Efecto hover para el botón */
-  .submit-btn:hover {
-    background-color: #218838; /* Color al pasar el mouse */
-  }
-  
+  background-color: #c1dee7; /* Color de fondo del formulario */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  background-color: #A2B9EE; /* Color de fondo del título */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form input[type="password"],
+.custom-form select,
+.custom-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #ffffff; /* Color de fondo de los campos */
+  transition: border-color 0.3s;
+}
+
+.custom-form input[type="text"]:focus,
+.custom-form input[type="email"]:focus,
+.custom-form input[type="password"]:focus,
+.custom-form select:focus,
+.custom-form textarea:focus {
+  border-color: #A2B9EE; 
+  outline: none; 
+}
+
+.submit-btn {
+  background-color: #A2B9EE; /* Color de fondo del botón */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #A2DCEE; 
+}
+
+.registration-number {
+  margin-top: 20px; 
+  font-size: 16px;
+  text-align: center; 
+  color: #333; 
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

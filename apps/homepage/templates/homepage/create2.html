@@ -1,8 +1,12 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
 
-<form method="post" class="custom-form">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Save" class="submit-btn"/>
-</form>
+<div class="form-container">
+    <h2 class="form-title">Registro de veterinarios</h2>
+    <form method="post" class="custom-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar" class="submit-btn"/>
+        <div id="registration-number" class="registration-number"></div>
+    </form>
+</div>
