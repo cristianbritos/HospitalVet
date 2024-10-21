@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView
 from .models import Veterinario
+from .models import Cliente
 
 # Create your views here.
 
@@ -30,3 +31,9 @@ class HomepageUpdateView(UpdateView):
     fields = ['nombre', 'telefono', 'dni']
     success_url = reverse_lazy('homepage-list')
 
+class Homepagelist(ListView):
+    model = Cliente
+    template_name = 'homepage/list.html'  
+
+    def get_queryset(self):
+        return Cliente.objects.all()
