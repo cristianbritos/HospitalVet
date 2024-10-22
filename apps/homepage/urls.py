@@ -1,8 +1,10 @@
 from django.urls import path, include
-from apps.homepage.views import HomepageListView, HomepageCreateView, HomepageUpdateView
+from apps.homepage.views.veterinario.views import VeterinarioListView, VeterinarioCreateView, VeterinarioUpdateView
+from apps.homepage.views.cliente.views import *
 
 urlpatterns = [
-    path('list/', HomepageListView.as_view(), name='homepage-list'),
-    path('add/', HomepageCreateView.as_view(), name='homepage-create'),
-    path('update/<int:pk>/', HomepageUpdateView.as_view(), name='homepage-update')
+    path('veterinario/list/', VeterinarioListView.as_view(), name='veterinario-list'),
+    path('veterinario/add/', VeterinarioCreateView.as_view(), name='veterinario-create'),
+    path('veterinario/update/<int:pk>/', VeterinarioUpdateView.as_view(), name='veterinario-update')
+    #path('cliente/list/', ClienteListView.as_view(), name='cliente-list'),
 ]

@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView
-from .models import Veterinario
+from apps.homepage.models import Veterinario
 
 # Create your views here.
 
-class HomepageListView(ListView):
+class VeterinarioListView(ListView):
     model = Veterinario
-    template_name = 'homepage/list.html'
+    template_name = 'veterinario/list.html'
    
     def get_queryset(self):
         return  Veterinario.objects.all()
@@ -17,16 +17,16 @@ class HomepageListView(ListView):
         context['tittle'] = 'Lista de Veterinarios'
         return context  
 
-class HomepageCreateView(CreateView):
+class VeterinarioCreateView(CreateView):
     model = Veterinario
-    template_name = 'homepage/create2.html'
+    template_name = 'veterinario/create2.html'
     fields = ['nombre', 'telefono', 'direccion', 'dni']
-    success_url = reverse_lazy('homepage-list') 
+    success_url = reverse_lazy('veterinario-list') 
 
 
-class HomepageUpdateView(UpdateView):
+class VeterinarioUpdateView(UpdateView):
     model = Veterinario
-    template_name = 'homepage/create2.html'
+    template_name = 'veterinario/create2.html'
     fields = ['nombre', 'telefono', 'dni']
-    success_url = reverse_lazy('homepage-list')
+    success_url = reverse_lazy('veterinario-list')
 
