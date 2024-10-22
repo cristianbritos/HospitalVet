@@ -26,7 +26,7 @@ class HomepageCreateView(CreateView):
 
 class HomepageUpdateView(UpdateView):
     model = Veterinario
-    template_name = 'homepage/create.html'
+    template_name = 'homepage/create2.html'
     fields = ['nombre', 'telefono', 'dni']
     success_url = reverse_lazy('homepage-list')
 
