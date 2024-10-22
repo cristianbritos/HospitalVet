@@ -76,3 +76,17 @@ class Turno(models.Model):
         verbose_name_plural = 'Turnos'
         ordering = ['fecha', 'hora']
 
+class HistorialMedico(models.Model):
+    mascota = models.ForeignKey(Mascota, on_delete=models.CASCADE, verbose_name='Mascota')
+    fecha = models.DateField(verbose_name='Fecha de Consulta')
+    motivo_consulta = models.CharField(max_length=255, verbose_name='Motivo de Consulta')
+    diagnostico = models.TextField(verbose_name='Diagnóstico')
+    tratamiento = models.TextField(verbose_name='Tratamiento')
+
+    def __str__(self):
+        return f"Historial de {self.mascota.nombre} - {self.fecha}"
+
+    class Meta:
+        verbose_name = 'Historial Médico'
+        verbose_name_plural = 'Historiales Médicos'
+        ordering = ['fecha']
