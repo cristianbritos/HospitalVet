@@ -5,32 +5,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Principal</title>
+    <title>Hospital Vet</title>
     <link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
     <link rel="icon" href="{% static 'img/icon.jpg'%}" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <h1>Bienvenido a mi página</h1>
+        <h1>Hospital Veterinario - UNLAR</h1>
     </header>
 
     <main>
-        <img src="{% static 'img/image.jpg' %}" alt="Imagen" class="img-modificada">
-        <h1>Veterinarios</h1>     
-        {{ tittle }}   
-        <ul>            
+        <img src="{% static 'img/hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
+        <h1>l Nuestros Veterinarios l</h1>
+        {{ tittle }}
+        <ul>
             {% for veterinario in object_list %}
             <li>Veterinario: {{ veterinario.nombre }} - DNI: {{ veterinario.dni }} - Telefono: {{ veterinario.telefono }}</li>
             {% empty %}
             <li>Sin Registros.</li>
             {% endfor %}
         </ul>
+        
+       
+        <div style="margin-top: 20px;">
+            <a href="{% url 'homepage-create' %}" class="btn-create">Agregar Veterinario</a>
+        </div>
     </main>
+    
+        
 
+        
+    </main>
     <footer>
-        <p>© 2024 Mi sitio web</p>
+        <p>© 2024 Hospital Veterinario</p>
     </footer>
+    
 </body>
 
 </html>
