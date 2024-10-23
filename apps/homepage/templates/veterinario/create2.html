@@ -1,9 +1,9 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
 <link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
-<title>Registrar Veterinario</title>
+<title>Registrar Veterinarios</title>
 <div class="form-container">
-    <h2 class="form-title">Registro de veterinarios</h2>
+    <h2 class="form-title">Registro de Veterinarios</h2>
     <form method="post" class="custom-form">
         {% csrf_token %}
         {{ form.as_p }}
