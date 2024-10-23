@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Vet</title>
-    <link rel="stylesheet" href="{% static 'cliente/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
     <link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
 </head>
 
@@ -17,11 +18,11 @@
 
     <main>
         <img src="{% static 'img/hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
-        <h1>Nuestros Clientes</h1>
+        <h1>Nuestras Mascotas</h1>
         {{ tittle }}
         <ul>
-            {% for cliente in object_list %}
-            <li>Veterinario: {{ cliente.nombre }} - DNI: {{ cliente.dni }} - Telefono: {{ cliente.telefono }}</li>
+            {% for mascota in object_list %}
+            <li>Mascota: {{ mascota.nombre }} - Raza: {{ mascota.raza }} - Color: {{ mascota.color }}</li>
             {% empty %}
             <li>Sin Registros.</li>
             {% endfor %}
@@ -29,7 +30,7 @@
         
        
         <div style="margin-top: 20px;">
-            <a href="{% url 'cliente-create' %}" class="btn-create">Agregar Cliente</a>
+            <a href="{% url 'mascota-create' %}" class="btn-create">Agregar Mascota</a>
         </div>
     </main>
     
@@ -43,4 +44,3 @@
     
 </body>
 
-</html>

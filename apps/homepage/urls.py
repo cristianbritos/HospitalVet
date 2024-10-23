@@ -1,6 +1,8 @@
 from django.urls import path, include
 from apps.homepage.views.veterinario.views import VeterinarioListView, VeterinarioCreateView, VeterinarioUpdateView
 from apps.homepage.views.cliente.views import ClienteListView, ClienteCreateView, ClienteUpdateView
+from apps.homepage.views.mascota.views import MascotaListView, MascotaCreateView
+from apps.homepage.views.principal.views import PrincipalListView
 
 urlpatterns = [
     path('veterinario/list/', VeterinarioListView.as_view(), name='veterinario-list'),
@@ -10,4 +12,9 @@ urlpatterns = [
     path('cliente/list/', ClienteListView.as_view(), name='cliente-list'),  
     path('cliente/add/', ClienteCreateView.as_view(), name='cliente-create'),
     path('cliente/update/<int:pk>/', ClienteUpdateView.as_view(), name='cliente-update'),
+    
+    path('mascota/list/', MascotaListView.as_view(), name='mascota-list'),  
+    path('mascota/add/', MascotaCreateView.as_view(), name='mascota-create'),
+
+    path('', PrincipalListView.as_view(), name='principal'),
 ]
