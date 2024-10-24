@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Vet</title>
     <link rel="stylesheet" href="{% static 'cliente/css/style.css' %}">
-    <link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
+    <link rel="icon" href="{% static 'cliente/img/iconhosp.png'%}" type="image/x-icon">
 </head>
 
 <body>
@@ -16,12 +16,12 @@
     </header>
 
     <main>
-        <img src="{% static 'img/hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
+        <img src="{% static 'img/Hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
         <h1>Nuestros Clientes</h1>
         {{ tittle }}
         <ul>
             {% for cliente in object_list %}
-            <li>Veterinario: {{ cliente.nombre }} - DNI: {{ cliente.dni }} - Telefono: {{ cliente.telefono }}</li>
+            <li>Cliente: {{ cliente.nombre }} - DNI: {{ cliente.dni }} - Telefono: {{ cliente.telefono }}</li>
             {% empty %}
             <li>Sin Registros.</li>
             {% endfor %}
