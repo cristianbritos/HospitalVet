@@ -1,8 +1,5 @@
 {% load static %}
-
 <!DOCTYPE html>
-
-
 <html >
     
   <head>
@@ -10,8 +7,6 @@
     <link rel="img" href="{% static 'img/hospitalveterinarioseded.jpeg'%}" >
     <title>UnlarHospital</title>
   </head>
-
-
 
  <body>
     <header>
@@ -25,11 +20,6 @@
         </div>
     </header>
 
-
-
-
-
-
     <section class="hero">
         <img src="{% static 'img/hospitalveterinarioseded.jpeg'%}"; class="imagen"/>
         <div class="texto-encima">
@@ -37,20 +27,17 @@
            <h1>Contamos<br>con los mejores profesionales</h1>
         </div>
     </section>
-     
 
  <section id="servicios">
     <div class="container">
         <h2>Nuestros Servicios</h2>
         <div class="cartelera">
-
-
             <div class="ofrecemos">
                 <h3>Atencion medica</h3>
                 <p> ofrecemos una amplia gama de servicios para garantizar la salud y el bienestar de los animales domésticos, salvajes y ganaderos.</p>
                     <h4>Encargado</h4>
                     <ul>
-                        {% for Veterinario in object_list %}
+                        {% for veterinario in object_list %}
                         <li>Veterinario: {{ veterinario.nombre }} - {{ veterinario.dni }} - {{ veterinario.telefono }}</li>
                         {% empty %}
                         <li>Sin Registros.</li>
@@ -59,7 +46,6 @@
                 </main>
             </div>
 
-            
             <div class="ofrecemos">
                 <h3>Laboratorio</h3>
                 <p>Unlar ofrece un laboratorio de diagnóstico veterinario que ofrece una amplia gama de exámenes, para animales domésticos, animales de producción y especies exóticas</p>
@@ -74,9 +60,6 @@
     </div>
 </section>
 
-
-
-
 <section id="somos-unlar">
     <div class="container">
         <h2>Somos <span class="color-acento">Unlar Hospital</h2>
@@ -84,15 +67,11 @@
     </div>
 </section>
 
-
-
 <footer>
     <div class="container">
         <p>&copy; UnlarHospitalVeterinario</p>
     </div>
 </footer>
 
-
 </body>
-
 </html>
