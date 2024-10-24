@@ -1,0 +1,72 @@
+.form-container {
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+  .custom-form {
+    background-color: #c1dee7; /* Color de fondo del formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    background-color: #A2B9EE; /* Color de fondo del título */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .custom-form input[type="text"],
+  .custom-form input[type="email"],
+  .custom-form input[type="password"],
+  .custom-form select,
+  .custom-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #ffffff; /* Color de fondo de los campos */
+    transition: border-color 0.3s;
+  }
+  
+  .custom-form input[type="text"]:focus,
+  .custom-form input[type="email"]:focus,
+  .custom-form input[type="password"]:focus,
+  .custom-form select:focus,
+  .custom-form textarea:focus {
+    border-color: #A2B9EE; 
+    outline: none; 
+  }
+  
+  .submit-btn {
+    background-color: #A2B9EE; /* Color de fondo del botón */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  
+  .registration-number {
+    margin-top: 20px; 
+    font-size: 16px;
+    text-align: center; 
+    color: #333; 
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }

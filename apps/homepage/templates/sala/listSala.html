@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Vet</title>
+    <link rel="stylesheet" href="{% static 'css/sala/style.css' %}">
+    <link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Hospital Veterinario - UNLAR</h1>
+    </header>
+
+    <main>
+        <img src="{% static 'img/hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
+        <h1>Salas</h1>
+        {{ tittle }}
+        <ul>
+            {% for sala in object_list %}
+            <li>Nombre: {{ sala.nombre }} - Ubicacion: {{ sala.ubicacion }} </li>
+            {% empty %}
+            <li>Sin Registros.</li>
+            {% endfor %}
+        </ul>
+        
+       
+        <div style="margin-top: 20px;">
+            <a href="{% url 'sala-create' %}" class="btn-create">Agregar Sala</a>
+        </div>
+    </main>
+    
+        
+
+        
+    </main>
+    <footer>
+        <p>© 2024 Hospital Veterinario</p>
+    </footer>
+    
+</body>

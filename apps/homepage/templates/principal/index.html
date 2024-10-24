@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+    
+  <head>
+    <link rel="stylesheet" href="{% static 'css/principal/style.css' %}">
+    <link rel="img" href="{% static 'img/hospitalveterinarioseded.jpeg'%}" >
+    <title>UnlarHospital</title>
+  </head>
+
+ <body>
+    <header>
+        <div class="container">
+         <p class="logo">Hospital Veterinario</p>
+          <nav>
+            <a href="Consultas">Consultas</a>
+            <a href="Personal-Medico">Personal Medico</a>
+            <a href="Contacto">Contacto</a>
+          </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="{% static 'img/hospitalveterinarioseded.jpeg'%}"; class="imagen"/>
+        <div class="texto-encima">
+           
+           <h1>Contamos<br>con los mejores profesionales</h1>
+        </div>
+    </section>
+
+ <section id="servicios">
+    <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="cartelera">
+            <div class="ofrecemos">
+                <h3>Atencion medica</h3>
+                <p> ofrecemos una amplia gama de servicios para garantizar la salud y el bienestar de los animales domésticos, salvajes y ganaderos.</p>
+                    <h4>Encargado</h4>
+                    <ul>
+                        {% for veterinario in object_list %}
+                        <li>Veterinario: {{ veterinario.nombre }} - {{ veterinario.dni }} - {{ veterinario.telefono }}</li>
+                        {% empty %}
+                        <li>Sin Registros.</li>
+                        {% endfor %}
+                    </ul>
+                </main>
+            </div>
+
+            <div class="ofrecemos">
+                <h3>Laboratorio</h3>
+                <p>Unlar ofrece un laboratorio de diagnóstico veterinario que ofrece una amplia gama de exámenes, para animales domésticos, animales de producción y especies exóticas</p>
+            </div>
+
+            <div class="ofrecemos">
+                <h3>Peluqueria canina</h3>
+                <p> ofrecemos Lavado y secado: Lavado y secado del pelo con técnicas y productos específicos para cada raza y tipo de pelaje.
+                    Corte y estilismo: Cortes y estilos personalizados según la raza, edad y preferencias del dueño del perro/a entre otras</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="somos-unlar">
+    <div class="container">
+        <h2>Somos <span class="color-acento">Unlar Hospital</h2>
+            <p>La Universidad Nacional de La Rioja es una institución pública y gratuita de educación superior que desarrolla sus actividades bajo el régimen de autarquía y autonomía que le otorga la Constitución Nacional. Es una comunidad abierta e inclusiva dedicada a la enseñanza, la investigación, la creación, la innovación y la transferencia del conocimiento en todos sus órdenes, concebida como un proceso de carácter y contenido ético, social, cultural y científico orientado hacia la construcción de una sociedad más próspera, justa y solidaria que posibilite el desarrollo humano integral y sustentable. La Universidad tiene por función esencial el desarrollo y la difusión de la cultura en todas sus  formas a través de la enseñanza superior, la extensión, la investigación, transferencia e   innovación científica, tecnológica y la educación profesional y técnica.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; UnlarHospitalVeterinario</p>
+    </div>
+</footer>
+
+</body>
+</html>

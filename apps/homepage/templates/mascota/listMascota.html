@@ -1,0 +1,45 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Vet</title>
+    <link rel="stylesheet" href="{% static 'css/mascota/style.css' %}">
+    <link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Hospital Veterinario - UNLAR</h1>
+    </header>
+
+    <main>
+        <img src="{% static 'img/hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
+        <h1>Nuestras Mascotas</h1>
+        {{ tittle }}
+        <ul>
+            {% for mascota in object_list %}
+            <li>Mascota: {{ mascota.nombre }} - Raza: {{ mascota.raza }} - Color: {{ mascota.color }}</li>
+            {% empty %}
+            <li>Sin Registros.</li>
+            {% endfor %}
+        </ul>
+        
+       
+        <div style="margin-top: 20px;">
+            <a href="{% url 'mascota-create' %}" class="btn-create">Agregar Mascota</a>
+        </div>
+    </main>
+    
+        
+
+        
+    </main>
+    <footer>
+        <p>© 2024 Hospital Veterinario</p>
+    </footer>
+    
+</body>

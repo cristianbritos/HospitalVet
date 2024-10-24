@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/cliente/style2.css' %}">
+<link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
+<title>Registrar Cliente</title>
+<div class="form-container">
+    <h2 class="form-title">Registro de clientes</h2>
+
+    <form method="post">
+    {% csrf_token %} 
+    {{ form.as_p }}
+
+    <input type="submit" value="Guardar" class="submit-btn"/>
+        <div id="registration-number" class="registration-number"></div>
+    </form>
+</div>
