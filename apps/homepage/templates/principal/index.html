@@ -24,7 +24,7 @@
         <img src="{% static 'img/hospitalveterinarioseded.jpeg'%}"; class="imagen"/>
         <div class="texto-encima">
            
-           <h1>Contamos<br>con los mejores profesionales</h1>
+           <h1>Hospital Veterinario - UNLAR sede Chamical<br></h1>
         </div>
     </section>
 
@@ -35,10 +35,10 @@
             <div class="ofrecemos">
                 <h3>Atencion medica</h3>
                 <p> ofrecemos una amplia gama de servicios para garantizar la salud y el bienestar de los animales domésticos, salvajes y ganaderos.</p>
-                    <h4>Encargado</h4>
+                    <h4>Nuestros Veterinarios</h4>
                     <ul>
                         {% for veterinario in object_list %}
-                        <li>Veterinario: {{ veterinario.nombre }} - {{ veterinario.dni }} - {{ veterinario.telefono }}</li>
+                        <li> {{ veterinario.nombre }} - {{ veterinario.dni }} - {{ veterinario.telefono }}</li>
                         {% empty %}
                         <li>Sin Registros.</li>
                         {% endfor %}
@@ -48,7 +48,8 @@
 
             <div class="ofrecemos">
                 <h3>Laboratorio</h3>
-                <p>Unlar ofrece un laboratorio de diagnóstico veterinario que ofrece una amplia gama de exámenes, para animales domésticos, animales de producción y especies exóticas</p>
+                <p>El Hospital Veterinario cuenta con consultorios externos para atender las mascotas, sala de
+                    necropsias y de bioimágenes, el sector de duchas, baños, box, depósitos químicos, sala de dirección y de anatomía.</p>
             </div>
 
             <div class="ofrecemos">
@@ -62,8 +63,11 @@
 
 <section id="somos-unlar">
     <div class="container">
-        <h2>Somos <span class="color-acento">Unlar Hospital</h2>
-            <p>La Universidad Nacional de La Rioja es una institución pública y gratuita de educación superior que desarrolla sus actividades bajo el régimen de autarquía y autonomía que le otorga la Constitución Nacional. Es una comunidad abierta e inclusiva dedicada a la enseñanza, la investigación, la creación, la innovación y la transferencia del conocimiento en todos sus órdenes, concebida como un proceso de carácter y contenido ético, social, cultural y científico orientado hacia la construcción de una sociedad más próspera, justa y solidaria que posibilite el desarrollo humano integral y sustentable. La Universidad tiene por función esencial el desarrollo y la difusión de la cultura en todas sus  formas a través de la enseñanza superior, la extensión, la investigación, transferencia e   innovación científica, tecnológica y la educación profesional y técnica.</p>
+        <h2>Somos <span class="color-acento">Hospital Veterinario</h2>
+            <p>Trabajando dia a dia desde su inaguración en 2021 es el primer centro de atención y formación veterinaria de la región. 
+                Llegando a ser un engrandecimiento para la Universidad de
+                La Rioja, para la Sede Chamical, para la provincia y para las zonas aledañas.
+            </p>
     </div>
 </section>
 

@@ -94,6 +94,7 @@ header a:hover {
 #servicios {
   background-color: rgba(4, 23, 192, 0.425);
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 #servicios .container {
@@ -175,6 +176,6 @@ footer .container {
   }
 
   footer .container {
-    justify-content: flex-end;
+    text-align: center;
   }
 }
