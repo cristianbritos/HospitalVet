@@ -15,8 +15,10 @@ urlpatterns = [
     path('cliente/add/', ClienteCreateView.as_view(), name='cliente-create'),
     path('cliente/update/<int:pk>/', ClienteUpdateView.as_view(), name='cliente-update'),
     
+
     path('mascota/list/', MascotaListView.as_view(), name='mascota-list'),  
     path('mascota/add/', MascotaCreateView.as_view(), name='mascota-create'),
+
 
     path('sala/list/', SalaListView.as_view(), name='sala-list'),  
     path('sala/add/', SalaCreateView.as_view(), name='sala-create'),
