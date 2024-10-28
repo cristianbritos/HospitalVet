@@ -22,6 +22,7 @@
         <ul>
             {% for cliente in object_list %}
             <li>Cliente: {{ cliente.nombre }} - DNI: {{ cliente.dni }} - Telefono: {{ cliente.telefono }}</li>
+            <a href="{% url 'cliente-update' cliente.pk %}">Editar</a>
             {% empty %}
             <li>Sin Registros.</li>
             {% endfor %}
