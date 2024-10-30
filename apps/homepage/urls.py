@@ -15,6 +15,7 @@ urlpatterns = [
     
     path('mascota/list/', MascotaListView.as_view(), name='mascota-list'),  
     path('mascota/add/', MascotaCreateView.as_view(), name='mascota-create'),
+    
 
     path('', PrincipalListView.as_view(), name='principal'),
 ]

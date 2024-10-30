@@ -1,0 +1,80 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; 
+    color: #535252; 
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-container {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);   
+    border-radius: 10px;  
+    max-width: 450px;
+    margin: 70px auto; 
+    padding: 20px;
+    background: rgb(255, 255, 255);     
+}
+
+
+.form-title {
+    text-align: center;
+    color: rgb(9, 221, 236);
+    margin-bottom: 50px;
+}
+
+
+.custom-form {
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.custom-form input[type="text"],
+.custom-form input[type="number"],
+.custom-form select {
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #5a5a5a; 
+    border-radius: 5px; 
+    font-size: 15px; 
+    transition: border-color 0.3s;
+}
+
+.custom-form input[type="text"]:focus,
+.custom-form input[type="number"]:focus,
+.custom-form select:focus {
+    outline:none;
+    border-color: rgba(57, 73, 218, 0.425); 
+    
+    
+}
+
+.submit-btn {
+    background: rgba(4, 172, 219, 0.932); 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: background 0.3s; 
+}
+.submit-btn:hover {
+    background: rgba(57, 73, 218, 0.425); 
+}
+
+
+.btn-lista {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: rgba(4, 172, 219, 0.932); 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.btn-lista:hover {
+    color: rgba(57, 73, 218, 0.425); 
+}

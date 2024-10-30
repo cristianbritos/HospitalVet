@@ -33,7 +33,7 @@ class Cliente(models.Model):
 
 
 class Mascota(models.Model):
-    nombre = models.CharField(max_length=100, verbose_name='Nombre de la Mascota')    
+    nombre = models.CharField(max_length=100, verbose_name='Mascota')    
     raza = models.CharField(max_length=100, verbose_name='Raza')    
     color = models.CharField(max_length=100, verbose_name='Color')    
     peso = models.IntegerField(default=1, null=True, verbose_name="Peso")
