@@ -2,6 +2,7 @@ from django.urls import path, include
 from apps.homepage.views.veterinario.views import VeterinarioListView, VeterinarioCreateView, VeterinarioUpdateView
 from apps.homepage.views.cliente.views import ClienteListView, ClienteCreateView, ClienteUpdateView
 from apps.homepage.views.mascota.views import MascotaListView, MascotaCreateView
+from apps.homepage.views.sala.views import SalaListView, SalaCreateView, SalaUpdateView
 from apps.homepage.views.principal.views import PrincipalListView
 
 urlpatterns = [
@@ -15,7 +16,10 @@ urlpatterns = [
     
     path('mascota/list/', MascotaListView.as_view(), name='mascota-list'),  
     path('mascota/add/', MascotaCreateView.as_view(), name='mascota-create'),
-    
+
+    path('sala/list/', SalaListView.as_view(), name='sala-list'),  
+    path('sala/add/', SalaCreateView.as_view(), name='sala-create'),
+    path('sala/update/<int:pk>/', SalaUpdateView.as_view(), name='sala-update'),
 
     path('', PrincipalListView.as_view(), name='principal'),
 ]

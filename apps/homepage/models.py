@@ -78,6 +78,7 @@ class Turno(models.Model):
 
 class HistorialMedico(models.Model):
     mascota = models.ForeignKey(Mascota, on_delete=models.CASCADE, verbose_name='Mascota')
+    veterinario = models.ForeignKey(Veterinario, on_delete=models.CASCADE, verbose_name='Veterinario')
     fecha = models.DateField(verbose_name='Fecha de Consulta')
     motivo_consulta = models.CharField(max_length=255, verbose_name='Motivo de Consulta')
     diagnostico = models.TextField(verbose_name='Diagnóstico')
