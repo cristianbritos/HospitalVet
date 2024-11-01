@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
 from apps.homepage.models import Mascota
+from apps.homepage.forms import MascotaForm
 
 # Create your views here.
 
@@ -20,6 +21,7 @@ class MascotaListView(ListView):
 
 class MascotaCreateView(CreateView):
     model = Mascota
+    form_class = MascotaForm
     template_name = 'mascota/create2.html'
-    fields = ['nombre', 'raza', 'color', 'peso']
+    #fields = ['nombre', 'raza', 'color', 'peso']
     success_url = reverse_lazy('mascota-list') 
