@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'histCli/css/style2.css' %}" />
+<link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon" />
+<title>Registrar Veterinario</title>
+<div class="form-container">
+  <h2 class="form-title">Registro de Historias Clinicas</h2>
+  <form method="post" class="custom-form">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Guardar" class="submit-btn" />
+    <a href="{% url 'histCli-list' %}" class="btn-lista">Ver listado</a>
+    <div id="registration-number" class="registration-number"></div>
+  </form>
+</div>

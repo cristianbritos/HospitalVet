@@ -1,5 +1,5 @@
 from django import forms
-from apps.homepage.models import Mascota, Cliente, Veterinario, Turno, Sala
+from apps.homepage.models import Mascota, Cliente, Veterinario, Turno, Sala, HistMedEnc
 
 class MascotaForm(forms.ModelForm):
     class Meta:
@@ -18,4 +18,13 @@ class TurnoForm(forms.ModelForm):
     
     mascota = forms.ModelChoiceField(queryset=Mascota.objects.all())
     sala = forms.ModelChoiceField(queryset=Sala.objects.all())
+    veterinario = forms.ModelChoiceField(queryset=Veterinario.objects.all())
+
+
+class HistMedForm(forms.ModelForm):
+    class Meta:
+        model = HistMedEnc
+        fields = ['mascota','veterinario','fecha_cre','alergias','detalle']
+
+    mascota = forms.ModelChoiceField(queryset=Mascota.objects.all())
     veterinario = forms.ModelChoiceField(queryset=Veterinario.objects.all())

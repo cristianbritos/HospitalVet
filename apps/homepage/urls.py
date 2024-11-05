@@ -4,6 +4,7 @@ from apps.homepage.views.cliente.views import ClienteListView, ClienteCreateView
 from apps.homepage.views.mascota.views import MascotaListView, MascotaCreateView
 from apps.homepage.views.turno.views import TurnoListView, TurnoCreateView
 from apps.homepage.views.sala.views import SalaListView, SalaCreateView, SalaUpdateView
+from apps.homepage.views.histCli.views import HistMedEncListView, HistMedEncCreateView, HistMedEncUpdateView
 from apps.homepage.views.principal.views import PrincipalListView
 
 urlpatterns = [
@@ -25,7 +26,10 @@ urlpatterns = [
    
     path('turno/list/', TurnoListView.as_view(), name='turno-list'),
     path('turno/add/', TurnoCreateView.as_view(), name='turno-create'),
-   
+
+    path('histCli/list/', HistMedEncListView.as_view(), name='histCli-list'),  
+    path('histCli/add/', HistMedEncCreateView.as_view(), name='histCli-create'),
+    path('histCli/update/<int:pk>/', HistMedEncUpdateView.as_view(), name='histCli-update'),
 
     path('', PrincipalListView.as_view(), name='principal'),
 ]

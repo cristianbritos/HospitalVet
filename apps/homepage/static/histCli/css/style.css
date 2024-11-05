@@ -1,0 +1,74 @@
+/* Estilo para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el encabezado */
+header {
+  background-color: #a2b9ee;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo para el párrafo */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 15px;
+}
+
+/* Estilo para el botón */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-color: #a2b9ee;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.img-modificada {
+  width: 300px;
+  height: auto;
+  margin-left: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+}
+
+.btn-create {
+  display: inline-block;
+  background-color: #a2b9ee; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #a2dcee; /* Color de fondo cuando el mouse pasa sobre el botón */
+}

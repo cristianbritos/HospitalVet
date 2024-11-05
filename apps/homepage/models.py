@@ -76,13 +76,12 @@ class Turno(models.Model):
         verbose_name_plural = 'Turnos'
         ordering = ['fecha', 'hora']
 
-class HistorialMedico(models.Model):
+class HistMedEnc(models.Model):
     mascota = models.ForeignKey(Mascota, on_delete=models.CASCADE, verbose_name='Mascota')
     veterinario = models.ForeignKey(Veterinario, on_delete=models.CASCADE, verbose_name='Veterinario')
-    fecha = models.DateField(verbose_name='Fecha de Consulta')
-    motivo_consulta = models.CharField(max_length=255, verbose_name='Motivo de Consulta')
-    diagnostico = models.TextField(verbose_name='Diagnóstico')
-    tratamiento = models.TextField(verbose_name='Tratamiento')
+    fecha_cre = models.DateField(verbose_name='Fecha de Creación')
+    alergias = models.CharField(max_length=255, verbose_name='Alergias')
+    detalle = models.TextField(verbose_name='Detalles')
 
     def __str__(self):
         return f"Historial de {self.mascota.nombre} - {self.fecha}"
@@ -90,4 +89,22 @@ class HistorialMedico(models.Model):
     class Meta:
         verbose_name = 'Historial Médico'
         verbose_name_plural = 'Historiales Médicos'
+        ordering = ['id']
+
+
+class HistMedDet(models.Model):
+    HMEnc = models.ForeignKey(HistMedEnc, on_delete=models.CASCADE, verbose_name='Historial Medico')
+    fecha = models.DateField(verbose_name='Fecha de Consulta')
+    motivo_consulta = models.CharField(max_length=255, verbose_name='Motivo de Consulta')
+    diagnostico = models.TextField(verbose_name='Diagnóstico')
+    tratamiento = models.TextField(verbose_name='Tratamiento')
+    practicas = models.TextField(verbose_name='Practicas')
+
+    def __str__(self):
+        return f"Fecha {self.fecha}: - {self.motiva_consulta}"
+
+    class Meta:
+        verbose_name = 'Historial Médico Detalle'
+        verbose_name_plural = 'Historiales Médicos Detalles'
         ordering = ['fecha']
+
