@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crear Detalle de Historial Médico</title>
+  </head>
+  <body>
+    <h1>Crear Detalle de Historial Médico</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'historial_list' %}">Volver a la lista de historiales</a>
+  </body>
+</html>

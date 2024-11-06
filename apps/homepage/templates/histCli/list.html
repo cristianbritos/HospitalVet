@@ -1,46 +1,74 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Vet - Lista de Historiales Médicos</title>
+    <link rel="stylesheet" href="{% static 'histCli/css/style.css' %}" />
+    <link
+      rel="icon"
+      href="{% static 'img/iconhosp.png'%}"
+      type="image/x-icon"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Vet</title>
-    <link rel="stylesheet" href="{% static 'histCli/css/style.css' %}">
-    <link rel="icon" href="{% static 'img/iconhosp.png'%}" type="image/x-icon">
-</head>
-
-<body>
+  <body>
     <header>
-        <h1>Hospital Veterinario - UNLAR</h1>
+      <h1>Hospital Veterinario - UNLAR</h1>
     </header>
 
     <main>
-        <img src="{% static 'img/Hospitalveterinarioseded.jpeg' %}" alt="Imagen" class="img-modificada">
-        <h1>Nuestros Clientes</h1>
-        {{ tittle }}
-        <ul>
-            {% for histCli in object_list %}
-            <li>Historia Clinica: {{ histCli.alergias }} - DNI: {{ histCli.detalle}}</li>
+      <img
+        src="{% static 'img/Hospitalveterinarioseded.jpeg' %}"
+        alt="Imagen"
+        class="img-modificada"
+      />
+      <h1>Historias Clinicas Registradas</h1>
+
+      <ul>
+        {% for histCli in object_list %}
+        <li>
+          <strong
+            >Historia Clínica N° {{histCli.id}}: Mascota:
+            {{histCli.mascota.nombre}} |
+          Alergias: {{histCli.alergias }} | Detalle: {{histCli.detalle }}
+          </a>
+          <a
+            href="{% url 'historial_det_create' histCli.id %}"
+            class="btn-detail"
+            >Agregar Detalle</a
+          >
+
+          <!-- Listar detalles asociados -->
+          <ul>
+            {% for detalle in histCli.histmeddet_set.all %}
+            <li>
+              <strong>Fecha:</strong> {{ detalle.fecha }} 
+              <strong>Motivo:</strong> {{ detalle.motivo_consulta }} <br />
+              <strong>Diagnóstico:</strong> {{ detalle.diagnostico }} <br />
+              <strong>Tratamiento:</strong> {{ detalle.tratamiento }} <br />
+              <strong>Prácticas:</strong> {{ detalle.practicas }}
+            </li>
             {% empty %}
-            <li>Sin Registros.</li>
+            <li>No hay detalles para este historial.</li>
             {% endfor %}
-        </ul>
-        
-       
-        <div style="margin-top: 20px;">
-            <a href="{% url 'histCli-create' %}" class="btn-create">Agregar Historia Clinica</a>
-        </div>
-    </main>
-    
-        
+          </ul>
+        </li>
+        {% empty %}
+        <li>Sin Registros.</li>
+        {% endfor %}
+      </ul>
 
-        
+      <div style="margin-top: 20px">
+        <a href="{% url 'historial_enc_create' %}" class="btn-create"
+          >Agregar Historia Clínica</a
+        >
+      </div>
     </main>
+
     <footer>
-        <p>© 2024 Hospital Veterinario</p>
+      <p>© 2024 Hospital Veterinario</p>
     </footer>
-    
-</body>
-
+  </body>
 </html>
